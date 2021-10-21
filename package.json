@@ -1,24 +1,14 @@
 {
-  "name": "mydiscordbot",
+  "name": "mydiscordbot2",
   "version": "1.0.0",
-  "description": "my first bot for testing ",
+  "description": "",
   "main": "bot.js",
-  "type": "module",
+  "author": "",
+  "license": "ISC",
   "dependencies": {
     "discord.io": "https://github.com/woor/discord.io/tarball/gateway_v6",
     "discord.js": "^13.2.0",
-    "dotenv": "^10.0.0",
     "nodemon": "^2.0.14",
     "winston": "^3.3.3"
-  },
-
-  "scripts": {
-    "start": "nodemon bot.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Granit Zeka",
-  "license": "ISC",
-  "engines":{
-    "node": "14.16.0"
   }
 }
