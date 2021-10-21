@@ -10,9 +10,13 @@
     "nodemon": "^2.0.14",
     "winston": "^3.3.3"
   },
+
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Granit Zeka",
-  "license": "ISC"
+  "license": "ISC",
+  "engines":{
+    "node": "16.9.0"
+  }
 }
