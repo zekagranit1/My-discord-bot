@@ -1,1 +1,1 @@
-working: node bot.js
+working: node bot.js -p $PORT
