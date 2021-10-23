@@ -31,7 +31,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
         var args = message.substring(1).split(' ');
         var cmd = args[0];
         let text;
-        if (cmd == 'play') {
+        if (cmd == 'info') {
             args.splice(0, 1)
             text = args.join(' ');
 
@@ -91,11 +91,6 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                 message: 'hello, ' + user
             })
             break;
-        case 'info':
-            bot.sendMessage({
-                to: channelID,
-                message: bot.username + " " + bot.id
-            })
 
         // Just add any case commands if you want to..
     }
