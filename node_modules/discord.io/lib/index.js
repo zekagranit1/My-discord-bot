@@ -2610,19 +2610,19 @@ function User(data) {
 	this.bot = this.bot || false;
 }
 function Member(client, server, data) {
-	copyKeys(data, this, ['user', 'joined_at',]);
-	this.id = data.user.id;
-	this.joined_at = Date.parse(data.joined_at);
-	this.color = colorFromRole(server, this);
-	['username', 'discriminator', 'bot', 'avatar', 'game'].forEach(function(k) {
-		if (k in Member.prototype) return;
-
-		Object.defineProperty(Member.prototype, k, {
-			get: function() { return client.users[this.id][k]; },
-			set: function(v) { client.users[this.id][k] = v; },
-			enumerable: true,
-		});
-	});
+    copyKeys(data, this, ['user', 'joined_at',]);
+    this.id = data.user.id;
+    this.joined_at = Date.parse(data.joined_at);
+    this.color = colorFromRole(server, this);
+    var tempThis = this;
+    ['username', 'discriminator', 'bot', 'avatar', 'game'].forEach(function(k) {
+        if (k in Member.prototype) return;
+        Object.defineProperty(Member.prototype, k, {
+            get: function() { return client.users[tempThis.id][k]; },
+            set: function(v) { client.users[tempThis.id][k] = v; },
+            enumerable: true,
+        });
+    });
 }
 function Role(data) {
 	copyKeys(data, this, ['permissions']);
