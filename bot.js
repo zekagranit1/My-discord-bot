@@ -1,4 +1,3 @@
-const p5 = require('node-p5');
 
 var Discord = require('discord.io');
 var logger = require('winston');
@@ -7,7 +6,7 @@ var auth = require('./auth.json');
 let searchUrl =
     'https://en.wikipedia.org/w/api.php?action=opensearch&format=json&search=';
 
-let wikiUrl = 'https://en.wikipedia.org/w/api.php?action=query&prop=info&inprop=url%7Ctalkid&format=json&titles=';
+// let wikiUrl = 'https://en.wikipedia.org/w/api.php?action=query&prop=info&inprop=url%7Ctalkid&format=json&titles=';
 
 // Configure logger settings
 logger.remove(logger.transports.Console);
@@ -71,14 +70,9 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                 console.error(error.message);
             });
             //--------------------------
-            
-            
 
 
         }
-
-
-
 
     }
 
